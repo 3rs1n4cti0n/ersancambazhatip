@@ -36,14 +36,11 @@ class CarouselListItemVerticalNoImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         decoration: BoxDecoration(
-            color: Colors.white,
             borderRadius: BorderRadius.circular(30),
-            boxShadow: const [
-              BoxShadow(
-                  blurStyle: BlurStyle.outer,
-                  color: Colors.white,
-                  blurRadius: 2)
-            ],
+            // ignore: prefer_const_literals_to_create_immutables
+            border: Border.all(
+                color: Colors.white.withOpacity(0.4),
+                strokeAlign: StrokeAlign.outside),
             gradient: _gradient),
         padding: const EdgeInsets.symmetric(horizontal: 25),
         child: Padding(
@@ -128,12 +125,10 @@ class CarouselListItemHorizontal extends StatelessWidget {
     return Container(
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(30),
-            boxShadow: const [
-              BoxShadow(
-                  blurStyle: BlurStyle.outer,
-                  color: Colors.white,
-                  blurRadius: 2)
-            ],
+            // ignore: prefer_const_literals_to_create_immutables
+            border: Border.all(
+                color: Colors.white.withOpacity(0.4),
+                strokeAlign: StrokeAlign.outside),
             gradient: _gradient),
         padding: const EdgeInsets.symmetric(horizontal: 25),
         child: Padding(
